@@ -1,0 +1,140 @@
+<style>
+/* SECTION GALERI */
+body {
+  padding-top: 10px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 140px;
+  }
+}
+
+.section {
+  padding: 36px 0;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section-desc {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.gallery-item {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.18s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.04);
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.7);
+  z-index: 200;
+  padding: 20px;
+}
+
+.lightbox img {
+  max-width: 96%;
+  max-height: 78%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lb-close {
+  position: fixed;
+  right: 18px;
+  top: 18px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+</style>
+
+<section class="section container">
+  <h1>Activity Gallery</h1>
+
+  <div class="gallery-grid">
+    <img src="img/struktur/fotobersama.jpg" alt="Galeri 2" class="gallery-item" />
+    <img src="img/struktur/fotobersama1.jpg" alt="Galeri 6" class="gallery-item" />
+    <img src="img/struktur/foto.jpg" alt="Galeri 1" class="gallery-item" />
+    <img src="img/struktur/fotobersama2.jpg" alt="Galeri 3" class="gallery-item" />
+    <img src="img/struktur/fotobersama3.jpg" alt="Galeri 4" class="gallery-item" />
+    <img src="img/struktur/fotobersama4.jpg" alt="Galeri 5" class="gallery-item" />
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lb-close">&times;</button>
+  <img id="lb-img" src="" alt="Gambar Besar">
+</div>
+
+<script>
+// Pastikan script ini dijalankan setelah elemen gallery muncul di halaman utama
+setTimeout(() => {
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  const lightbox = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lb-img");
+  const lbClose = document.getElementById("lb-close");
+
+  if (!galleryItems.length) return; // jika belum termuat, hentikan
+
+  galleryItems.forEach(item => {
+    item.addEventListener("click", () => {
+      lbImg.src = item.src;
+      lightbox.style.display = "flex";
+    });
+  });
+
+  lbClose.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) lightbox.style.display = "none";
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") lightbox.style.display = "none";
+  });
+}, 200);
+</script>

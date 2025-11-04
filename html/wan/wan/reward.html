@@ -1,173 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- PANGGIL CSS YANG SAMA -->
+<link rel="stylesheet" href="css/members.css">
+<style>/* ========== JARAK DARI HEADER (DESKTOP) ========== */
+/* === Ruang agar konten tidak tertutup header fixed === */
+body {
+  padding-top: 10px; /* default untuk mobile */
+}
 
-<head>
-    <!-- Basic Page Needs -->
-    <meta charset="utf-8">
-    <title>Infix ~ Reward & achievements</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+/* Tambah jarak lebih besar untuk tampilan PC/laptop */
+@media (min-width: 992px) {
+  body {
+    padding-top: 140px; /* sesuaikan kalau header lebih tinggi di PC */
+  }
+}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/stellarnav.min.css">
-    <link rel="stylesheet" href="css/pignose.calendar.min.css">
-    <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</style>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="img/LogoKelas1.png">
-</head>
+<!-- =======================
+     REWARD KELAS
+======================== -->
+<section class="section container">
+  <!-- <br><br><br><br><br> -->
+  <h2>Reward Kelas</h2>
+  <p class="section-desc">Penghargaan untuk siswa terbaik dan berprestasi.</p>
 
-<body>
-    <div id="preloader"></div>
+  <div class="grid">
+    <article class="card">
+      <div class="card-img">
+        <img src="img/struktur/gifari.jpg" alt="Siswa Terbaik">
+      </div>
+      <div class="card-body">
+        <h3>Siswa Terbaik</h3>
+        <p class="name">Ringga Budi Utomo</p>
+        <p class="desc">Selalu menjadi inspirasi bagi teman-temannya.</p>
+      </div>
+    </article>
+  </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navLinks = document.querySelectorAll('.stellarnav a.nav-link');
+  const menu = document.querySelector('.stellarnav');
 
-    <!-- HEADER -->
-    <header>
-        <div class="header-container">
-            <div class="row">
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                    <div class="logo mt-3">
-                        <a href="index.html" class="link">1nfix</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-3 col-sm-8 col-6">
-                    <div class="main-menu stellarnav">
-                        <nav class="navbar-custom py-3" style="background-color: transparent;">
-                            <div class="container justify-content-center p-0">
-                                <ul class="nav nav-pills custom-nav-pills position-relative">
-                                    <span class="active-indicator"></span>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="members.html" data-page="members">Members</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="reward.html" data-page="reward">Reward</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-7 col-12 d-none d-md-block">
-                    <div class="header-right">
-                        <div class="get-quote">
-                            <a href="#" class="link btn-style-1">Sign In</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero-area">
-        <div class="container text-center">
-            <div class="reward-wrapper py-5">
-                <div class="reward-icon mb-4">
-                    <div class="rounded-circle d-inline-flex align-items-center justify-content-center shadow-sm"
-                        style="width:120px;height:120px;background-color:#f5f6fa;">
-                        <i class="bi bi-trophy" style="font-size:60px;color:#adb5bd;"></i>
-                    </div>
-                </div>
-
-                <h3 class="fw-bold mb-2">No Rewards Yet</h3>
-                <p class="text-muted mb-4">
-                    Our class hasn’t earned any awards or achievements yet.<br>
-                    Stay motivated — the next victory is waiting for us 💪
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                        <div class="fba-social">
-                            <ul class="social">
-                                <li>
-                                    <a href="https://www.instagram.com/int.formatics_class/" target="_blank"
-                                        rel="noopener noreferrer" aria-label="Instagram">
-                                        <i class="fab fa-instagram" aria-hidden="true"></i>
-                                        <span class="text">Instagram</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <p class="copyright">Copyright By @LAGeneracionDoradaDe1nfix+ - 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JS: NAVBAR INTERAKTIF -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const links = document.querySelectorAll(".custom-nav-pills .nav-link");
-            const indicator = document.querySelector(".active-indicator");
-
-            function moveIndicator(element) {
-                const rect = element.getBoundingClientRect();
-                const parentRect = element.parentElement.parentElement.getBoundingClientRect();
-                indicator.style.width = rect.width + "px";
-                indicator.style.left = rect.left - parentRect.left + "px";
-                indicator.style.transition = "all 0.3s ease";
-            }
-
-            links.forEach(link => {
-                link.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    links.forEach(l => l.classList.remove("active"));
-                    this.classList.add("active");
-                    moveIndicator(this);
-
-                    // beri jeda kecil agar animasi indikator jalan dulu
-                    setTimeout(() => {
-                        window.location.href = this.getAttribute("href");
-                    }, 150);
-                });
-            });
-
-            // Posisi awal indikator
-            const activeLink = document.querySelector(".nav-link.active");
-            if (activeLink) moveIndicator(activeLink);
-        });
-    </script>
-
-    <!-- SCRIPTS -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/countdown.js"></script>
-    <script src="js/pignose.calendar.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/stellarnav.min.js"></script>
-    <script src="js/jquery.scrollUp.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/theme.js"></script>
-</body>
-
-</html>
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Tutup menu setelah link diklik (khusus tampilan mobile)
+      if (window.innerWidth < 992) {
+        const toggleBtn = document.querySelector('.stellarnav .menu-toggle');
+        if (toggleBtn && menu.classList.contains('active')) {
+          toggleBtn.click(); // trigger tombol menu untuk menutup
+        }
+      }
+    });
+  });
+});
+</script>

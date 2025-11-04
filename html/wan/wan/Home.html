@@ -1,0 +1,117 @@
+<section class="section container">
+    <section class="hero-area">
+        <div class="hero-bg-left"><img src="img/home1/hero-left-bg.png" alt=""></div>
+        <div class="hero-bg-right"><img src="img/home1/hero-right-bg.png" alt=""></div>
+        <div class="hero-banner wow fadeIn animated" data-wow-duration="1.0s" data-wow-delay="1.0s">
+            <img class="item-bounce" src="img/LogoKelas1.png" alt="">
+        </div>
+
+        <div class="container">
+            <div class="col-lg-7 col-md-7 col-12 me-2">
+                <div class="hero-content">
+                    <h2 class="title"><span class="light">Who we?<br></span>LA GENERACION "1NFIX"</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-area" id="_about">
+        <div class="about-banner-contact wow fadeInRight" data-wow-duration="1.0s" data-wow-delay="0.5s">
+            <img src="img/pedang.png" alt="">
+        </div>
+        <div class="about-right-bg"><img src="img/home1/about-right-bg.png" alt=""></div>
+        <div class="about-left-bg wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay="0.5s">
+            <img src="img/home1/about-left-banner.png" alt="">
+        </div>
+        <div class="about-top-plant wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay="0.5s">
+            <img src="img/shield.png" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="about-all-boxes">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-12 wow fadeInUp" data-wow-delay="00ms"
+                                data-wow-duration="1500ms">
+                                <div class="about-box">
+                                    <div class="content">
+                                        <h2 class="name">D.R.E.A.M - Dare, Rise, Explore, Achieve, Motivate</h2>
+                                        <p class="text">We dream big, take risks, and lift each other toward success</p>
+                                    </div>
+                                </div>
+                                <div class="about-box">
+                                    <div class="content">
+                                        <h2 class="name">A cool friend</h2>
+                                        <p class="text">Having a comfortable circle of friends</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-12 wow fadeInUp" data-wow-delay="300ms"
+                                data-wow-duration="1500ms">
+                                <div class="about-box-martop80 mar-top-80"></div>
+                                <div class="about-box">
+                                    <div class="content">
+                                        <h2 class="name">On Time</h2>
+                                        <p class="text">Do the job on time</p>
+                                    </div>
+                                </div>
+                                <div class="about-box">
+                                    <div class="content">
+                                        <h2 class="name">F.O.C.U.S – Future-Oriented Class, Uniting Success</h2>
+                                        <p class="text">Always looking ahead — learning today to build tomorrow.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-7 col-12 d-flex align-items-center">
+                    <div class="about-right-content section-title">
+                        <h2 class="intro">What does infix have?</h2>
+                        <h2 class="title">With <span class="bold">1nfix</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div id="home-gallery"></div>
+
+    
+
+    <main id="page-content">
+  <!-- Konten dari file lain (members.html, reward.html) akan muncul di sini -->
+    </main>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navLinks = document.querySelectorAll('.stellarnav a.nav-link');
+  const menu = document.querySelector('.stellarnav');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Tutup menu setelah link diklik (khusus tampilan mobile)
+      if (window.innerWidth < 992) {
+        const toggleBtn = document.querySelector('.stellarnav .menu-toggle');
+        if (toggleBtn && menu.classList.contains('active')) {
+          toggleBtn.click(); // trigger tombol menu untuk menutup
+        }
+      }
+    });
+  });
+});
+</script>
+
+<script>
+  // Hanya load gallery di home
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch('gallery.html') // file gallery terpisah
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('home-gallery').innerHTML = html;
+      })
+      .catch(err => console.error('Gagal load gallery:', err));
+  });
+</script>

@@ -1,0 +1,263 @@
+/* ====== WARNA DASAR ====== */
+:root {
+  --blue-1: #004aad;
+  --muted: #555;
+  --card: #fff;
+  --radius: 12px;
+  --gap: 1.2rem;
+}
+
+/* ====== SECTION ====== */
+.section {
+  padding: 40px 0;
+}
+
+.section h2 {
+  color: var(--blue-1);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.section-desc {
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+/* ====== GRID ====== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--gap);
+  padding: 10px;
+}
+
+/* ====== CARD ====== */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== GAMBAR ====== */
+.card-img {
+  aspect-ratio: 3 / 4; /* proporsi foto potret */
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ====== ISI CARD ====== */
+.card-body {
+  padding: 14px;
+}
+
+.card-body h3 {
+  color: var(--blue-1);
+  font-size: 1.05rem;
+  margin: 0 0 4px;
+}
+
+.card-body .name {
+  font-weight: 600;
+  margin-top: 6px;
+  color: #222;
+}
+
+.card-body .desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* ====== RESPONSIF UNTUK HP ====== */
+@media (max-width: 600px) {
+  .section {
+    padding: 24px 0;
+  }
+
+  .section h2 {
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+}
+
+/* SECTION UMUM */
+.section {
+  padding: 36px 0;
+}
+
+.section h2 {
+  color: var(--blue-1);
+  margin-bottom: 6px;
+}
+
+.section-desc {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* GALLERY GRID */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.18s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.04);
+}
+
+/* LIGHTBOX (opsional untuk klik gambar memperbesar) */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.7);
+  z-index: 200;
+  padding: 20px;
+}
+
+.lightbox img {
+  max-width: 96%;
+  max-height: 78%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lb-close {
+  position: fixed;
+  right: 18px;
+  top: 18px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE GALLERY */
+@media (max-width: 1000px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* SECTION UMUM */
+.section {
+  padding: 36px 0;
+}
+
+.section h2 {
+  color: var(--blue-1);
+  margin-bottom: 6px;
+}
+
+.section-desc {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* GALLERY GRID */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.18s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.04);
+}
+
+/* LIGHTBOX (opsional untuk klik gambar memperbesar) */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.7);
+  z-index: 200;
+  padding: 20px;
+}
+
+.lightbox img {
+  max-width: 96%;
+  max-height: 78%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lb-close {
+  position: fixed;
+  right: 18px;
+  top: 18px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE GALLERY */
+@media (max-width: 1000px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

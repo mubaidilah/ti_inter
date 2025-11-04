@@ -4,8 +4,9 @@
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>Infix ~ Introduction</title>
+    <title>Infix</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -19,7 +20,8 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" type="image/png" href="img/LogoKelas1.png">
 </head>
 
@@ -42,107 +44,45 @@
                             <div class="container justify-content-center p-0">
                                 <ul class="nav nav-pills custom-nav-pills position-relative">
 
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="members.html" data-page="members">Members</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="reward.html" data-page="reward">Reward</a>
-                                    </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link nav-home" href="#" data-page="home">Dashboard</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link" href="#" data-page="members">Class Structure</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link" href="#" data-page="gallery">Gallery</a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a class="nav-link" href="#" data-page="reward">Reward</a>
+                                        </li>
+
+
                                 </ul>
                             </div>
                         </nav>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-7 col-12 d-none d-md-block">
-                    <div class="header-right">
-                        <div class="get-quote">
-                            <a href="#" class="link btn-style-1 mt-4">Sign In</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero-area">
-        <div class="hero-bg-left"><img src="img/home1/hero-left-bg.png" alt=""></div>
-        <div class="hero-bg-right"><img src="img/home1/hero-right-bg.png" alt=""></div>
-        <div class="hero-banner wow fadeIn animated" data-wow-duration="1.0s" data-wow-delay="1.0s">
-            <img class="item-bounce" src="img/LogoKelas1.png" alt="">
-        </div>
+    <main id="page-content">
+  <!-- Konten dari file lain (members.html, reward.html) akan muncul di sini -->
+    </main>
+    
 
-        <div class="container">
-            <div class="col-lg-7 col-md-7 col-12 me-2">
-                <div class="hero-content">
-                    <h2 class="title"><span class="light">Who we?<br></span>LA GENERACION "1NFIX"</h2>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id="home-gallery"></div>
 
-    <!-- ABOUT SECTION -->
-    <section class="about-area" id="_about">
-        <div class="about-banner-contact wow fadeInRight" data-wow-duration="1.0s" data-wow-delay="0.5s">
-            <img src="img/pedang.png" alt="">
-        </div>
-        <div class="about-right-bg"><img src="img/home1/about-right-bg.png" alt=""></div>
-        <div class="about-left-bg wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay="0.5s">
-            <img src="img/home1/about-left-banner.png" alt="">
-        </div>
-        <div class="about-top-plant wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay="0.5s">
-            <img src="img/shield.png" alt="">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <div class="about-all-boxes">
-                        <div class="row">
-                            <div class="col-lg-6 col-sm-6 col-12 wow fadeInUp" data-wow-delay="00ms"
-                                data-wow-duration="1500ms">
-                                <div class="about-box">
-                                    <div class="content">
-                                        <h2 class="name">D.R.E.A.M - Dare, Rise, Explore, Achieve, Motivate</h2>
-                                        <p class="text">We dream big, take risks, and lift each other toward success</p>
-                                    </div>
-                                </div>
-                                <div class="about-box">
-                                    <div class="content">
-                                        <h2 class="name">A cool friend</h2>
-                                        <p class="text">Having a comfortable circle of friends</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-12 wow fadeInUp" data-wow-delay="300ms"
-                                data-wow-duration="1500ms">
-                                <div class="about-box-martop80 mar-top-80"></div>
-                                <div class="about-box">
-                                    <div class="content">
-                                        <h2 class="name">On Time</h2>
-                                        <p class="text">Do the job on time</p>
-                                    </div>
-                                </div>
-                                <div class="about-box">
-                                    <div class="content">
-                                        <h2 class="name">F.O.C.U.S – Future-Oriented Class, Uniting Success</h2>
-                                        <p class="text">Always looking ahead — learning today to build tomorrow.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lb-close">&times;</button>
+    <img id="lb-img" src="" alt="Gambar Besar">
+</div>
 
-                <div class="col-lg-6 col-md-7 col-12 d-flex align-items-center">
-                    <div class="about-right-content section-title">
-                        <h2 class="intro">What does infix have?</h2>
-                        <h2 class="title">With <span class="bold">1nfix</span></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div id="home-schedule"></div>
 
     <!-- FOOTER -->
     <footer>
@@ -159,14 +99,6 @@
                                         <span class="text">Instagram</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="https://wa.me/6282131648786?text=Halo ur Website it's so cool"
-                                        target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                                        <span class="text">WhatsApp</span>
-                                    </a>
-                                </li>
-
                             </ul>
                             <p class="copyright">Copyright By@LAGeneracionDoradaDe1nfix+ - 2025</p>
                         </div>
@@ -176,45 +108,124 @@
         </div>
     </footer>
 
-    <!-- SCRIPT FIX NAV -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const links = document.querySelectorAll(".custom-nav-pills .nav-link");
-            const indicator = document.createElement("span");
-            indicator.classList.add("active-indicator");
-            document.querySelector(".custom-nav-pills").appendChild(indicator);
+    
 
-            function moveIndicator(el) {
-                const rect = el.getBoundingClientRect();
-                const parentRect = el.parentElement.parentElement.getBoundingClientRect();
-                indicator.style.width = rect.width + "px";
-                indicator.style.left = rect.left - parentRect.left + "px";
-                indicator.style.transition = "all 0.3s ease";
-            }
+         <!-- ================= JAVASCRIPT FINAL ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const content = document.getElementById("page-content");
+  const links = document.querySelectorAll(".nav-link[data-page]");
+  const homeGallery = document.getElementById("home-gallery");
+  const lightbox = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lb-img");
+  const lbClose = document.getElementById("lb-close");
 
-            // indikator disembunyikan dulu
-            indicator.style.display = "none";
+  /* ================== FUNGSI LOAD HALAMAN ================== */
+  function loadPage(page) {
+    fetch(page + ".html")
+      .then(res => res.text())
+      .then(html => {
+        content.innerHTML = html;
+        window.scrollTo({ top: 0, behavior: "smooth" });
 
-            links.forEach(link => {
-                link.addEventListener("click", function () {
-                    links.forEach(l => l.classList.remove("active"));
-                    this.classList.add("active");
-                    indicator.style.display = "block"; // baru muncul saat diklik
-                    moveIndicator(this);
-                });
+        // Jika halaman Home → tampilkan gallery & jadwal
+        if (page === "home") {
+          loadSection("gallery.html", homeGallery);
+          loadSection("schedule.html", homeGallery);
+        } else {
+          homeGallery.innerHTML = ""; // sembunyikan saat bukan home
+        }
+      })
+      .catch(() => {
+        content.innerHTML = "<p style='text-align:center;'>Halaman tidak ditemukan 😢</p>";
+      });
+  }
 
-                link.addEventListener("mouseenter", () => {
-                    if (document.querySelector(".nav-link.active")) moveIndicator(link);
-                });
+  /* ================== FUNGSI LOAD GALLERY/JADWAL ================== */
+  function loadSection(file, target) {
+    fetch(file)
+      .then(res => res.text())
+      .then(html => {
+        target.insertAdjacentHTML("beforeend", html);
+        target.style.display = "block";
+        initLightbox(); // aktifkan lightbox tiap kali gallery dimuat
+      })
+      .catch(err => console.error("Gagal memuat " + file, err));
+  }
 
-                link.addEventListener("mouseleave", () => {
-                    const current = document.querySelector(".nav-link.active");
-                    if (current) moveIndicator(current);
-                });
-            });
-        });
+  /* ================== LIGHTBOX FUNCTION ================== */
+  function initLightbox() {
+    const galleryItems = document.querySelectorAll(".gallery-item");
+    galleryItems.forEach(item => {
+      item.addEventListener("click", () => {
+        lbImg.src = item.src;
+        lightbox.style.display = "flex";
+      });
+    });
+  }
 
-    </script>
+  // Tutup lightbox
+  lbClose.addEventListener("click", () => lightbox.style.display = "none");
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) lightbox.style.display = "none";
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") lightbox.style.display = "none";
+  });
+
+  /* ================== EVENT KLIK MENU ================== */
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const page = link.dataset.page;
+      links.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+      loadPage(page);
+
+      // Sembunyikan home gallery jika bukan home
+      if (page !== "home") homeGallery.style.display = "none";
+    });
+  });
+
+  /* ================== INDIKATOR NAVBAR ================== */
+  const indicator = document.createElement("span");
+  indicator.classList.add("active-indicator");
+  const nav = document.querySelector(".custom-nav-pills");
+  if (nav) nav.appendChild(indicator);
+
+  function moveIndicator(el) {
+    const rect = el.getBoundingClientRect();
+    const parentRect = el.parentElement.parentElement.getBoundingClientRect();
+    indicator.style.width = rect.width + "px";
+    indicator.style.left = rect.left - parentRect.left + "px";
+    indicator.style.transition = "all 0.3s ease";
+  }
+
+  links.forEach(link => {
+    link.addEventListener("click", () => moveIndicator(link));
+    link.addEventListener("mouseenter", () => moveIndicator(link));
+  });
+
+  /* ================== RESPONSIVE MENU (MOBILE) ================== */
+  const navLinks = document.querySelectorAll('.stellarnav a.nav-link');
+  const menu = document.querySelector('.stellarnav');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 992) {
+        const toggleBtn = document.querySelector('.stellarnav .menu-toggle');
+        if (toggleBtn && menu.classList.contains('active')) toggleBtn.click();
+      }
+    });
+  });
+
+  /* ================== LOAD HOME SAAT AWAL ================== */
+  loadPage("home");
+});
+</script>
+<!-- ====================================================== -->
+
+
+
 
     <!-- JS -->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -233,6 +244,55 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/theme.js"></script>
+
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navLinks = document.querySelectorAll('.stellarnav a.nav-link');
+  const menu = document.querySelector('.stellarnav');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Tutup menu setelah link diklik (khusus tampilan mobile)
+      if (window.innerWidth < 992) {
+        const toggleBtn = document.querySelector('.stellarnav .menu-toggle');
+        if (toggleBtn && menu.classList.contains('active')) {
+          toggleBtn.click(); // trigger tombol menu untuk menutup
+        }
+      }
+    });
+  });
+});
+</script>
+
+
+<script>
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbClose = document.getElementById('lb-close');
+
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      lbImg.src = item.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  lbClose.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', e => {
+    if(e.target === lightbox) lightbox.style.display = 'none';
+  });
+
+  document.addEventListener('keydown', e => {
+    if(e.key === "Escape") lightbox.style.display = 'none';
+  });
+</script>
+
+
 </body>
 
 </html>
